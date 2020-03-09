@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+    <head>
+        <title> Real Time Exporter</title>
+        <link rel="stylesheet" href="static/css/style.css" />
+        <script src="static/js/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+       
+        <div class="notification__widget">
+            <div class="indicators">    
+                <span class="counter">0/0</span>
+                <span class="spinner">Status</span>          
+            </div> 
+            <div class="progress__widget">
+                <div class="progress__bar">
+                    <div class="progress__indicator"></div>
+                </div>
+            </div>  
+
+            <button type="button" id="fetchDataBtn">Fetch data</button>
+        </div>
+
+        <!-- Scripts -->
+        <script src='static/js/socket.logic.js'></script>
+    </body>
+</html>
