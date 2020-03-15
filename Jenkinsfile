@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Socket Exporter Prepare Stage'
                 nodejs(nodeJSInstallationName: 'NodeV10') {
+                    echo "Checking npm version"
                     sh 'npm -v'
                 }
 
