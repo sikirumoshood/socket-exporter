@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Kafene API Test Stage'
+                echo 'Socket Exporter Stage'
                 echo 'Warning : Skipping Tests'
                 // sh 'db-migrate up -e test'
                 // sh 'npm run test'
