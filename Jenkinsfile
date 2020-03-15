@@ -14,7 +14,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Socket Exporter Build Stage'
-                sh 'npm install'
+                nodejs(nodeJSInstallationName: 'NodeV10') {
+                    echo "Installing dependencies"
+                    sh 'npm install'
+                }
 
             }
         }
