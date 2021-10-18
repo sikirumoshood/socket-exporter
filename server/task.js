@@ -54,7 +54,12 @@ class Task {
     }
 
     setTotalAvailablePages ({ count }) {
-        this.availablePages = Math.ceil(parseFloat(count) / this.chunkSize);
+        if(parseFloat(count) > this.chunkSize){
+            this.availablePages = Math.ceil(parseFloat(count) / this.chunkSize);
+        }else{
+            this.availablePages = parseFloat(count);
+        }
+        
         this.pageCountHasBeenSet = true;
         console.log('====================Total Set Available: ', this.availablePages);
     }

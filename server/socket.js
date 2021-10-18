@@ -12,7 +12,7 @@ const setupSocket = (app) => {
             db,
             query: query.getApplications,
             countQuery: query.getApplicationsCount,
-            chunk: 100
+            chunk: 1
         }
         new Task(socket, params).start();
     });
